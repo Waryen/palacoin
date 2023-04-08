@@ -1,0 +1,35 @@
+{
+  "name": "palacoin",
+  "version": "1.0.0",
+  "description": "The official Palacoin blockchain, only for fun.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "format": "prettier ./src/**/* --write",
+    "build": "esbuild ./src/index.js --bundle --minify --platform=node --target=node16.20 --outfile=./dist/index.js",
+    "start": "node ./dist/index.js"
+  },
+  "keywords": [
+    "palacoin",
+    "crypto",
+    "cryptocurrency",
+    "currency",
+    "blockain",
+    "palamos"
+  ],
+  "author": "Waryen <jonathangomand@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "hash.js": "^1.1.7"
+  },
+  "devDependencies": {
+    "esbuild": "^0.17.15",
+    "lint-staged": "^13.2.1",
+    "prettier": "^2.8.7"
+  },
+  "lint-staged": {
+    "*.js": "prettier --write"
+  },
+  "volta": {
+    "node": "16.20.0"
+  }
+}
